@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merlin Hydraulics - Interactive Spec Sheet</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --apple-black: #1d1d1f;
+            --apple-gray: #86868b;
+            --apple-divider: #f5f5f7;
+            --apple-blue: #0066cc;
+            --bg-white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-white);
+            color: var(--apple-black);
+            line-height: 1.5;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* Typography */
+        .label {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--apple-blue);
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .headline {
+            font-size: 48px;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+            margin-bottom: 16px;
+        }
+
+        @media (max-width: 768px) {
+            .headline {
+                font-size: 32px;
+            }
+        }
+
+        .subheadline {
+            font-size: 21px;
+            color: var(--apple-gray);
+            font-weight: 500;
+            margin-bottom: 48px;
+            max-width: 600px;
+        }
+
+        /* Selector */
+        .selector-group {
+            margin-bottom: 64px;
+        }
+
+        .selector-label {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        select {
+            width: 100%;
+            max-width: 400px;
+            padding: 16px 20px;
+            font-size: 17px;
+            font-family: inherit;
+            font-weight: 500;
+            border: 2px solid var(--apple-divider);
+            border-radius: 12px;
+            background-color: var(--apple-divider);
+            color: var(--apple-black);
+            appearance: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+            background-size: 16px;
+        }
+
+        select:focus {
+            outline: none;
+            border-color: var(--apple-blue);
+            background-color: var(--bg-white);
+        }
+
+        /* Bento Grid */
+        .spec-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        @media (max-width: 1024px) {
+            .spec-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .spec-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .spec-card {
+            background: var(--bg-white);
+            padding: 32px;
+            border-radius: 24px;
+            border: 1px solid var(--apple-divider);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s ease;
+        }
+
+        .spec-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.04);
+        }
+
+        .spec-card.highlight {
+            background-color: var(--apple-divider);
+            border: none;
+        }
+
+        .spec-name {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--apple-gray);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 8px;
+        }
+
+        .spec-value {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--apple-black);
+        }
+
+        .spec-unit {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--apple-gray);
+            margin-left: 4px;
+        }
+
+        /* Animation */
+        .fade-in {
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .footer-note {
+            margin-top: 64px;
+            padding-top: 32px;
+            border-top: 1px solid var(--apple-divider);
+            font-size: 14px;
+            color: var(--apple-gray);
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span class="label">Technical Specifications</span>
+        <h1 class="headline">MLPVL Series</h1>
+        <p class="subheadline">Ultra-flat hydraulic cylinders designed for precision lifting where space is at a premium.</p>
+
+        <div class="selector-group">
+            <label for="modelSelector" class="selector-label">Choose a Model</label>
+            <select id="modelSelector">
+                <!-- Options will be populated by JS -->
+            </select>
+        </div>
+
+        <div class="spec-grid" id="specGrid">
+            <!-- Cards will be populated by JS -->
+        </div>
+
+        <div class="footer-note">
+            * All models are designed for 700 bar maximum working pressure. Hard chrome plated ram to resist scoring and corrosion. Precision engineered in India.
+        </div>
+    </div>
+
+    <script>
+        const productData = [
+            { model: "MLPVL 10-10", capacity: "10", stroke: "10", closedHeight: "30", od: "80", bore: "45", ram: "45", weight: "1.2" },
+            { model: "MLPVL 20-10", capacity: "20", stroke: "10", closedHeight: "35", od: "100", bore: "63", ram: "63", weight: "2.2" },
+            { model: "MLPVL 30-10", capacity: "30", stroke: "10", closedHeight: "40", od: "110", bore: "75", ram: "75", weight: "3.0" },
+            { model: "MLPVL 50-10", capacity: "50", stroke: "10", closedHeight: "50", od: "140", bore: "100", ram: "100", weight: "6.0" },
+            { model: "MLPVL 100-10", capacity: "100", stroke: "10", closedHeight: "70", od: "180", bore: "140", ram: "140", weight: "14.0" },
+            { model: "MLPVL 150-10", capacity: "150", stroke: "10", closedHeight: "75", od: "220", bore: "170", ram: "170", weight: "22.0" },
+            { model: "MLPVL 200-10", capacity: "200", stroke: "10", closedHeight: "80", od: "255", bore: "200", ram: "200", weight: "34.0" },
+            { model: "MLPVL 300-10", capacity: "300", stroke: "10", closedHeight: "90", od: "310", bore: "240", ram: "240", weight: "55.0" }
+        ];
+
+        const selector = document.getElementById('modelSelector');
+        const grid = document.getElementById('specGrid');
+
+        // Populate Selector
+        productData.forEach((item, index) => {
+            const option = document.createElement('option');
+            option.value = index;
+            option.textContent = item.model;
+            selector.appendChild(option);
+        });
+
+        function updateSpecs(index) {
+            const data = productData[index];
+            const specs = [
+                { name: "Capacity", value: data.capacity, unit: "Ton" },
+                { name: "Stroke", value: data.stroke, unit: "mm" },
+                { name: "Closed Height", value: data.closedHeight, unit: "mm" },
+                { name: "Cylinder OD", value: data.od, unit: "mm" },
+                { name: "Bore Dia", value: data.bore, unit: "mm" },
+                { name: "Ram Dia", value: data.ram, unit: "mm" },
+                { name: "Weight", value: data.weight, unit: "kg" },
+                { name: "Pressure", value: "700", unit: "bar" }
+            ];
+
+            grid.innerHTML = '';
+            specs.forEach((spec, i) => {
+                const card = document.createElement('div');
+                card.className = 'spec-card fade-in';
+                if (spec.name === 'Capacity' || spec.name === 'Stroke') card.classList.add('highlight');
+                card.style.animationDelay = `${i * 0.05}s`;
+                
+                card.innerHTML = `
+                    <div class="spec-name">${spec.name}</div>
+                    <div class="spec-value">${spec.value}<span class="spec-unit">${spec.unit}</span></div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        selector.addEventListener('change', (e) => {
+            updateSpecs(e.target.value);
+        });
+
+        // Initial Load
+        updateSpecs(0);
+    </script>
+</body>
+</html>

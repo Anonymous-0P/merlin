@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-merlin-blue: #0066cc;
+  --color-merlin-ivory: #fffff0;
+  --color-merlin-sage: #a2b6ad;
+  --color-merlin-dark: #000000;
+  --color-merlin-gray: #f2f3e8;
+
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-merlin-ivory text-merlin-dark antialiased selection:bg-merlin-blue selection:text-white;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-merlin-ivory/85 backdrop-blur-md border-b border-merlin-sage/35;
+  }
+  
+  .apple-card {
+    @apply bg-merlin-gray rounded-[24px] overflow-hidden border border-merlin-sage/25 shadow-sm transition-all duration-500 hover:shadow-xl hover:-translate-y-1;
+  }
+
+  .apple-text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-b from-black to-zinc-700;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    height: 4px;
+    width: 4px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 rounded-full hover:bg-gray-400 transition-colors;
+  }
+
+  .timeline-marker {
+    left: var(--marker-mobile-left);
+    top: var(--marker-mobile-top);
+  }
+
+  @media (min-width: 640px) {
+    .timeline-marker {
+      left: var(--marker-left);
+      top: var(--marker-top);
+    }
+  }
+}
