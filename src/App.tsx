@@ -77,7 +77,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-merlin-ivory text-black">
+    <div className="min-h-screen bg-white">
       <Header setView={(nextView) => navigate(nextView)} onHome={handleGoHome} />
 
       <main>
@@ -131,15 +131,15 @@ export default function App() {
         </AnimatePresence>
 
         {!['store', 'detail', 'gallery', 'contact', 'infrastructure', 'news'].includes(view) && (
-          <section className="py-24 bg-merlin-gray border-y border-merlin-sage/25">
+          <section className="py-24 bg-merlin-gray">
             <div className="max-w-4xl mx-auto px-6 text-center">
               <h2 className="text-5xl md:text-6xl font-bold mb-8 tracking-tight">Ready to lift your business?</h2>
-              <p className="text-xl text-zinc-700 mb-12">Join thousands of companies worldwide that trust Merlin Hydraulics for their critical operations.</p>
+              <p className="text-xl text-gray-500 mb-12">Join thousands of companies worldwide that trust Merlin Hydraulics for their critical operations.</p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                 <button onClick={() => navigate('contact')} className="w-full sm:w-auto px-10 py-5 bg-merlin-blue text-white rounded-full font-bold text-lg hover:bg-blue-700 transition-all shadow-xl shadow-blue-500/20">
                   Get a Quote
                 </button>
-                <button className="w-full sm:w-auto px-10 py-5 bg-merlin-ivory border border-merlin-sage/50 rounded-full font-bold text-lg hover:border-merlin-blue hover:text-merlin-blue transition-all text-black">
+                <button className="w-full sm:w-auto px-10 py-5 bg-white border border-gray-200 rounded-full font-bold text-lg hover:bg-gray-50 transition-all text-gray-900">
                   Download Catalog
                 </button>
               </div>

@@ -29,7 +29,7 @@ export default function HeroContent({ setView }: { setView: (view: AppView) => v
           </button>
           <button
             onClick={() => setView('contact')}
-            className="h-14 w-[176px] sm:w-[190px] bg-merlin-ivory/90 backdrop-blur-md text-black border border-merlin-ivory rounded-full font-bold text-sm hover:border-merlin-blue hover:text-merlin-blue transition-all active:scale-95 shadow-[0_18px_45px_rgba(15,23,42,0.22)]"
+            className="h-14 w-[176px] sm:w-[190px] bg-white/85 backdrop-blur-md text-gray-900 border border-white/80 rounded-full font-bold text-sm hover:bg-white transition-all active:scale-95 shadow-[0_18px_45px_rgba(15,23,42,0.22)]"
           >
             Enquire Now
           </button>

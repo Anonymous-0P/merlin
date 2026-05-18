@@ -24,7 +24,7 @@ export default function HomePage({ setView }: { setView: (view: AppView) => void
 
   return (
     <div className="flex flex-col">
-      <section className="relative h-[calc(100vh-58px)] mt-[58px] w-full overflow-hidden bg-merlin-ivory flex flex-col justify-center items-center">
+      <section className="relative h-[calc(100vh-58px)] mt-[58px] w-full overflow-hidden bg-white flex flex-col justify-center items-center">
         <HeroBackground videoIndex={currentVideoIdx} />
         <HeroContent setView={setView} />
 
@@ -45,7 +45,7 @@ export default function HomePage({ setView }: { setView: (view: AppView) => void
         </motion.div>
       </section>
 
-      <section className="py-14 bg-merlin-ivory text-black relative overflow-hidden border-y border-merlin-sage/25">
+      <section className="py-14 bg-white text-gray-900 relative overflow-hidden border-y border-gray-100">
         <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'radial-gradient(circle, #0066cc 1px, transparent 1px)', backgroundSize: '30px 30px' }} />
         <div className="max-w-6xl mx-auto px-6 relative z-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-5">
@@ -55,20 +55,20 @@ export default function HomePage({ setView }: { setView: (view: AppView) => void
               { label: 'Global Clients', value: '1000+', icon: Users },
               { label: 'Quality Rating', value: '99.9%', icon: ShieldCheck },
             ].map((stat, i) => (
-              <motion.div key={stat.label} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="p-4 sm:p-6 rounded-[18px] sm:rounded-[24px] bg-merlin-gray border border-merlin-sage/25 shadow-sm hover:border-merlin-blue/35 hover:shadow-lg transition-all group relative overflow-hidden">
+              <motion.div key={stat.label} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="p-4 sm:p-6 rounded-[18px] sm:rounded-[24px] bg-white border border-gray-100 shadow-sm hover:border-merlin-blue/30 transition-all group relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-merlin-blue/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-merlin-blue/10 flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-500">
                   <stat.icon size={20} className="sm:w-6 sm:h-6 text-merlin-blue" />
                 </div>
-                <p className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tighter mb-1 sm:mb-2 text-black">{stat.value}</p>
-                <p className="text-[8px] sm:text-[10px] text-zinc-600 font-black uppercase tracking-[0.2em]">{stat.label}</p>
+                <p className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tighter mb-1 sm:mb-2 text-gray-900">{stat.value}</p>
+                <p className="text-[8px] sm:text-[10px] text-gray-400 font-black uppercase tracking-[0.2em]">{stat.label}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-16 sm:py-24 bg-merlin-gray border-y border-merlin-sage/20">
+      <section className="py-16 sm:py-24 bg-[#f5f5f7]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col lg:flex-row gap-10 lg:gap-20 items-center">
             <div className="w-full lg:w-[58%] order-2 lg:order-1">
@@ -77,7 +77,7 @@ export default function HomePage({ setView }: { setView: (view: AppView) => void
                 <h3 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tighter mb-6 leading-[1.02] text-black">
                   <TypewriterText text="Precision-engineered for the most demanding environments." />
                 </h3>
-                <p className="text-base sm:text-lg text-zinc-700 mb-8 leading-relaxed font-medium">
+                <p className="text-base sm:text-lg text-gray-500 mb-8 leading-relaxed font-medium">
                   Merlin Hydraulics Pvt Ltd has been at the forefront of hydraulic innovation for over two decades. We specialize in the design, development, and manufacturing of high-pressure hydraulic systems that power critical infrastructure worldwide.
                 </p>
               </motion.div>
@@ -87,9 +87,9 @@ export default function HomePage({ setView }: { setView: (view: AppView) => void
                 <div className="aspect-[4/5] rounded-[28px] overflow-hidden shadow-2xl">
                   <img src="https://media.istockphoto.com/id/2148121243/photo/engineers-are-inspecting-the-plumbing-and-water-valves-inside-an-industrial-facility.jpg?s=612x612&w=0&k=20&c=cJdLiBs0AQzdX_E2CFKWSZoHMhHb_3_jydOijMdNJxU=" className="w-full h-full object-cover" alt="Merlin Hydraulics Facility" referrerPolicy="no-referrer" />
                 </div>
-                <div className="absolute -bottom-8 -right-8 bg-merlin-ivory p-7 rounded-[24px] shadow-2xl max-w-[210px] hidden xl:block border border-merlin-sage/25">
+                <div className="absolute -bottom-8 -right-8 bg-white p-7 rounded-[24px] shadow-2xl max-w-[210px] hidden xl:block border border-gray-50">
                   <p className="text-merlin-blue font-black text-5xl mb-2 tracking-tighter">99.9%</p>
-                  <p className="font-bold text-sm text-zinc-700 leading-tight">Uptime reliability for our hydraulic systems in heavy industry.</p>
+                  <p className="font-bold text-sm text-gray-500 leading-tight">Uptime reliability for our hydraulic systems in heavy industry.</p>
                 </div>
               </motion.div>
             </div>
@@ -97,13 +97,13 @@ export default function HomePage({ setView }: { setView: (view: AppView) => void
         </div>
       </section>
 
-      <section id="industries" className="py-16 sm:py-24 bg-merlin-ivory">
+      <section id="industries" className="py-16 sm:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-14">
             <h3 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tighter mb-5 text-black">
               <TypewriterText text="Industries We Cater." />
             </h3>
-            <p className="text-lg sm:text-xl text-zinc-700 max-w-2xl mx-auto font-medium">Providing specialized hydraulic solutions across diverse industrial sectors.</p>
+            <p className="text-lg sm:text-xl text-gray-500 max-w-2xl mx-auto font-medium">Providing specialized hydraulic solutions across diverse industrial sectors.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-6 gap-5 lg:gap-6">
@@ -134,7 +134,7 @@ export default function HomePage({ setView }: { setView: (view: AppView) => void
         </div>
       </section>
 
-      <section id="about-global" className="py-16 sm:py-24 bg-merlin-ivory overflow-hidden">
+      <section id="about-global" className="py-16 sm:py-24 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
             <div className="w-full lg:w-1/2">
@@ -145,7 +145,7 @@ export default function HomePage({ setView }: { setView: (view: AppView) => void
                     <TypewriterText text="About Us" />
                   </h3>
                 </div>
-                <div className="space-y-6 text-base sm:text-lg text-zinc-700 leading-relaxed font-medium">
+                <div className="space-y-6 text-base sm:text-lg text-gray-600 leading-relaxed font-medium">
                   <p><span className="font-bold text-merlin-dark">Merlin Hydraulics</span> was established in the year <span className="font-bold text-merlin-dark">1990</span> and has emerged as a leading player in the Hydraulics industry with the innovation and development of a wide array of products and services.</p>
                   <p>We cater to a diverse spectrum of industries like the Sugar industry, Steel factories, Rolling mills, Railways wagon manufacturing, Nuclear shelters for defence, Automobiles and various other verticals.</p>
                   <p>We are extremely proud to be associated with major global organisations having a strong export base in countries like <span className="font-bold text-merlin-dark">USA, Mexico, Guatemala, Brazil, Uganda, Kenya, Ethiopia, South Africa, Sudan, Nigeria, Indonesia, Thailand etc.</span></p>

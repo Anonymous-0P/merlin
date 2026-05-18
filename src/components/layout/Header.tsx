@@ -86,7 +86,7 @@ export default function Header({ setView, onHome }: HeaderProps) {
   return (
     <>
       <nav
-        className={`fixed top-0 w-full z-[100] transition-all duration-300 bg-merlin-ivory/95 backdrop-blur-xl border-b border-merlin-sage/35 shadow-sm ${activeDropdown ? 'shadow-md' : ''}`}
+        className={`fixed top-0 w-full z-[100] transition-all duration-300 bg-white/95 backdrop-blur-xl border-b border-gray-200/70 shadow-sm ${activeDropdown ? 'shadow-md' : ''}`}
         onMouseLeave={() => setActiveDropdown(null)}
       >
         <div className="relative h-[58px] w-full px-4 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -107,16 +107,16 @@ export default function Header({ setView, onHome }: HeaderProps) {
                   if (item.name === 'Home') onHome();
                   else if (item.view) navigate(item.view);
                 }}
-                className={`text-[12px] font-bold transition-all hover:text-merlin-blue hover:opacity-100 ${
+                className={`text-[12px] font-bold transition-opacity hover:opacity-100 ${
                   activeDropdown ? (activeDropdown === item.name ? 'opacity-100' : 'opacity-40') : 'opacity-80'
-                } text-black`}
+                } text-gray-900`}
               >
                 {item.name}
               </button>
             ))}
           </div>
 
-          <button className="md:hidden hover:text-merlin-blue transition-colors text-black ml-auto" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <button className="md:hidden hover:opacity-100 transition-opacity text-gray-900 ml-auto" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             <Menu size={20} />
           </button>
         </div>
@@ -128,17 +128,17 @@ export default function Header({ setView, onHome }: HeaderProps) {
               animate={{ height: 'auto', opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
-              className="bg-merlin-ivory overflow-hidden border-b border-merlin-sage/25"
+              className="bg-white overflow-hidden"
             >
               <div className="max-w-[1000px] mx-auto px-6 py-12">
                 <div className="grid grid-cols-12 gap-12">
                   <div className="col-span-12 md:col-span-4 flex flex-col gap-2">
-                    <span className="text-[11px] font-semibold text-zinc-600 mb-4 uppercase tracking-wider">Explore {activeDropdown}</span>
+                    <span className="text-[11px] font-semibold text-gray-400 mb-4 uppercase tracking-wider">Explore {activeDropdown}</span>
                     {navigationData.find((d) => d.name === activeDropdown)?.megaMenu?.explore.map((exp) => (
                       <button
                         key={exp.name}
                         onClick={() => exp.view && navigate(exp.view)}
-                        className="text-2xl font-bold text-black hover:text-merlin-blue hover:translate-x-1 transition-all text-left"
+                        className="text-2xl font-bold text-gray-900 hover:text-black hover:translate-x-1 transition-all text-left"
                       >
                         {exp.name}
                       </button>
@@ -157,7 +157,7 @@ export default function Header({ setView, onHome }: HeaderProps) {
             initial={{ opacity: 0, backdropFilter: 'blur(0px)' }}
             animate={{ opacity: 1, backdropFilter: 'blur(20px)' }}
             exit={{ opacity: 0, backdropFilter: 'blur(0px)' }}
-            className="fixed inset-0 z-40 bg-merlin-ivory pt-32 px-10 md:hidden text-black"
+            className="fixed inset-0 z-40 bg-white pt-32 px-10 md:hidden text-gray-900"
           >
             <div className="flex flex-col gap-6">
               {navigationData.map((item, i) => (
@@ -171,7 +171,7 @@ export default function Header({ setView, onHome }: HeaderProps) {
                     else if (item.view) navigate(item.view);
                     setIsMenuOpen(false);
                   }}
-                  className="text-4xl font-bold text-left hover:text-merlin-blue transition-colors tracking-tight text-black"
+                  className="text-4xl font-bold text-left hover:text-merlin-blue transition-colors tracking-tight text-gray-900"
                 >
                   {item.name}
                 </motion.button>

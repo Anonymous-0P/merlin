@@ -422,21 +422,592 @@ const BASE_PRODUCTS: Product[] = [
     }
   },
   {
-    id: "mcc-cutter",
-    name: "MCC Cable Cutter",
+    id: "construction-msf150t-flat-jack",
+    name: "MSF150T Flat Jack",
     category: "construction",
-    description: "Hydraulic cable cutter for construction and utility work.",
-    image: "https://www.merlinhydraulics.com/wp-content/uploads/2026/03/7.-MCC-Cable-Cutter-300x300.png",
-    color: "bg-blue-50",
+    description: "Low-height hydraulic flat jack for bridge, structure and heavy equipment lifting.",
+    image: "/products/3. Equipments for Construction/IMG20230712121122.jpg",
+    color: "bg-slate-50",
+    isNew: true,
+    colors: ["#d1d5db", "#64748b", "#ef4444"],
     specs: {
-      capacity: "Max 50mm Dia",
-      stroke: "N/A",
-      pressure: "700 bar"
+      capacity: "150 ton",
+      stroke: "Low-height stroke",
+      pressure: "Hydraulic lifting"
     },
+    features: [
+      "Compact flat body for construction lifting where vertical clearance is limited.",
+      "Integrated hydraulic connection for controlled lifting and positioning.",
+      "Designed for bridge, civil structure and heavy machinery maintenance."
+    ],
     technicalData: {
-      headers: ["Model", "Cutting Cap (mm)", "Output (tons)", "Length (mm)", "Weight (kg)"],
+      headers: ["Specification", "Details"],
       rows: [
-        ["MCC-50", "50", "12", "450", "8.5"]
+        ["Model", "MSF150T"],
+        ["Application", "Construction lifting, bridge jacking, structural positioning"],
+        ["Construction", "Low-height hydraulic flat jack"],
+        ["Availability", "Application-specific sizing available on request"]
+      ]
+    }
+  },
+  {
+    id: "construction-synchronized-jacking-system",
+    name: "Synchronized Jacking System",
+    category: "construction",
+    description: "Multi-point hydraulic jacking setup for controlled construction lifting operations.",
+    image: "/products/3. Equipments for Construction/1001.png",
+    color: "bg-blue-50",
+    isNew: true,
+    colors: ["#111827", "#94a3b8", "#2563eb"],
+    specs: {
+      capacity: "Multi-point lifting",
+      stroke: "Synchronized control",
+      pressure: "High-pressure hydraulic"
+    },
+    features: [
+      "Multiple pressure gauges and control valves for coordinated lifting points.",
+      "Suitable for bridge, slab, girder and structure lifting operations.",
+      "Built on a stable skid for construction-site use."
+    ],
+    technicalData: {
+      headers: ["Specification", "Details"],
+      rows: [
+        ["Control", "Multi-point hydraulic valve and gauge assembly"],
+        ["Application", "Synchronized lifting and lowering"],
+        ["Use case", "Bridge, structure and heavy construction alignment"],
+        ["Configuration", "Custom station count and power source on request"]
+      ]
+    }
+  },
+  {
+    id: "construction-hydraulic-power-pack",
+    name: "Construction Hydraulic Power Pack",
+    category: "construction",
+    description: "Heavy-duty hydraulic power unit for construction jacks and lifting systems.",
+    image: "/products/3. Equipments for Construction/IMG_2623-removebg-preview.png",
+    color: "bg-slate-50",
+    colors: ["#111827", "#475569", "#ef4444"],
+    specs: {
+      capacity: "Custom power output",
+      stroke: "N/A",
+      pressure: "High-pressure hydraulic"
+    },
+    features: [
+      "Power unit with gauge and controls for construction hydraulic equipment.",
+      "Supports jacking, lifting and positioning applications.",
+      "Configurable tank, motor and valve options based on project needs."
+    ],
+    technicalData: {
+      headers: ["Specification", "Details"],
+      rows: [
+        ["Type", "Hydraulic power pack"],
+        ["Controls", "Gauge and operator controls"],
+        ["Application", "Construction jacks and lifting systems"],
+        ["Customization", "Tank capacity, motor rating and valves as required"]
+      ]
+    }
+  },
+  {
+    id: "construction-long-stroke-cylinder",
+    name: "Long Stroke Construction Cylinder",
+    category: "construction",
+    description: "Long-stroke hydraulic cylinder for bridge and construction positioning systems.",
+    image: "/products/3. Equipments for Construction/IMG_3494-removebg-preview.png",
+    color: "bg-blue-50",
+    colors: ["#64748b", "#94a3b8", "#ef4444"],
+    specs: {
+      capacity: "Project-specific",
+      stroke: "Long stroke",
+      pressure: "Hydraulic positioning"
+    },
+    features: [
+      "Long cylinder body with clevis-style mounting for construction assemblies.",
+      "Used for pushing, pulling, aligning and positioning heavy structures.",
+      "Can be paired with hydraulic power packs for field operation."
+    ],
+    technicalData: {
+      headers: ["Specification", "Details"],
+      rows: [
+        ["Type", "Long-stroke hydraulic cylinder"],
+        ["Mounting", "Clevis-style end connection"],
+        ["Application", "Bridge and civil construction positioning"],
+        ["Stroke", "Made to suit project requirements"]
+      ]
+    }
+  },
+  {
+    id: "construction-strand-jacking-system",
+    name: "Strand Jacking System",
+    category: "construction",
+    description: "Hydraulic strand jacking kit for lifting and holding heavy construction loads.",
+    image: "/products/3. Equipments for Construction/IMG_3493-removebg-preview.png",
+    color: "bg-slate-50",
+    colors: ["#64748b", "#94a3b8", "#111827"],
+    specs: {
+      capacity: "Heavy construction loads",
+      stroke: "System-specific",
+      pressure: "Hydraulic jacking"
+    },
+    features: [
+      "Complete construction lifting setup with power unit, long cylinders and supports.",
+      "Designed for controlled lifting, holding and alignment work.",
+      "Suitable for bridge and large civil structure applications."
+    ],
+    technicalData: {
+      headers: ["Specification", "Details"],
+      rows: [
+        ["System", "Hydraulic jacking kit"],
+        ["Includes", "Power unit, cylinders and support fixtures"],
+        ["Application", "Construction lifting and structure alignment"],
+        ["Configuration", "Custom capacity and layout available"]
+      ]
+    }
+  },
+  {
+    id: "construction-heavy-hydraulic-jack",
+    name: "Heavy Construction Jack",
+    category: "construction",
+    description: "High-capacity hydraulic jack for civil construction lifting and support.",
+    image: "/products/3. Equipments for Construction/IMG_3190-.png",
+    color: "bg-blue-50",
+    colors: ["#1d4ed8", "#64748b", "#111827"],
+    specs: {
+      capacity: "High capacity",
+      stroke: "Project-specific",
+      pressure: "Hydraulic lifting"
+    },
+    features: [
+      "Robust cylinder body for heavy civil construction applications.",
+      "Designed for high-load lifting, support and positioning.",
+      "Available with project-specific stroke and mounting options."
+    ],
+    technicalData: {
+      headers: ["Specification", "Details"],
+      rows: [
+        ["Type", "Heavy hydraulic jack"],
+        ["Application", "Civil construction and structural lifting"],
+        ["Capacity", "Configured to project load requirements"],
+        ["Options", "Custom stroke, body size and mounting"]
+      ]
+    }
+  },
+  {
+    id: "construction-compact-hydraulic-jack",
+    name: "Compact Construction Jack",
+    category: "construction",
+    description: "Compact hydraulic jack for construction lifting and maintenance work.",
+    image: "/products/3. Equipments for Construction/IMG_2653-.png",
+    color: "bg-orange-50",
+    colors: ["#f97316", "#94a3b8", "#111827"],
+    specs: {
+      capacity: "Project-specific",
+      stroke: "Compact stroke",
+      pressure: "Hydraulic lifting"
+    },
+    features: [
+      "Compact vertical jack body for field lifting applications.",
+      "Hydraulic connection points support controlled operation.",
+      "Suitable for construction support, positioning and maintenance tasks."
+    ],
+    technicalData: {
+      headers: ["Specification", "Details"],
+      rows: [
+        ["Type", "Compact hydraulic jack"],
+        ["Application", "Construction lifting and support"],
+        ["Configuration", "Custom capacity and stroke available"],
+        ["Operation", "Hydraulic power pack or hand pump"]
+      ]
+    }
+  },
+  {
+    id: "construction-high-capacity-jack",
+    name: "High Capacity Construction Jack",
+    category: "construction",
+    description: "Heavy-duty construction jack for demanding lifting and alignment operations.",
+    image: "/products/3. Equipments for Construction/IMG_2654-.png",
+    color: "bg-orange-50",
+    colors: ["#f97316", "#94a3b8", "#111827"],
+    specs: {
+      capacity: "High capacity",
+      stroke: "Project-specific",
+      pressure: "Hydraulic lifting"
+    },
+    features: [
+      "Heavy jack construction for demanding site loads.",
+      "Designed for stable lifting and structural positioning.",
+      "Can be supplied as part of a complete hydraulic lifting system."
+    ],
+    technicalData: {
+      headers: ["Specification", "Details"],
+      rows: [
+        ["Type", "High-capacity hydraulic jack"],
+        ["Application", "Construction lifting and alignment"],
+        ["Supply", "Standalone jack or integrated system"],
+        ["Customization", "Capacity and stroke to suit site requirements"]
+      ]
+    }
+  },
+  {
+    id: "construction-telescopic-jack",
+    name: "Telescopic Construction Jack",
+    category: "construction",
+    description: "Telescopic-style hydraulic jack for construction lifting applications.",
+    image: "/products/3. Equipments for Construction/IMG_2656-.png",
+    color: "bg-slate-50",
+    colors: ["#f97316", "#94a3b8", "#475569"],
+    specs: {
+      capacity: "Project-specific",
+      stroke: "Extended stroke",
+      pressure: "Hydraulic lifting"
+    },
+    features: [
+      "Extended body design for construction lifting and positioning.",
+      "Hydraulic operation supports controlled movement under load.",
+      "Suitable for project-specific lifting systems."
+    ],
+    technicalData: {
+      headers: ["Specification", "Details"],
+      rows: [
+        ["Type", "Telescopic-style construction jack"],
+        ["Application", "Lifting, positioning and support"],
+        ["Stroke", "Extended stroke configuration"],
+        ["Customization", "Project-specific capacity and interface"]
+      ]
+    }
+  },
+  {
+    id: "construction-hand-pump-25",
+    name: "Hydraulic Hand Pump 25",
+    category: "construction",
+    description: "Manual hydraulic hand pump for construction lifting equipment.",
+    image: "/products/3. Equipments for Construction/Hydraulic Power Pack & Hand Pump/25.png",
+    color: "bg-blue-50",
+    colors: ["#1d4ed8", "#94a3b8", "#111827"],
+    specs: {
+      capacity: "Manual pump",
+      stroke: "N/A",
+      pressure: "Hydraulic hand pump"
+    },
+    features: [
+      "Manual pressure generation for hydraulic jacks and construction tools.",
+      "Portable setup for field maintenance and lifting work.",
+      "Suitable for controlled low-volume hydraulic operation."
+    ],
+    technicalData: {
+      headers: ["Specification", "Details"],
+      rows: [
+        ["Type", "Hydraulic hand pump"],
+        ["Operation", "Manual"],
+        ["Application", "Construction jacks and hydraulic tools"],
+        ["Portability", "Field-ready pump unit"]
+      ]
+    }
+  },
+  {
+    id: "construction-hand-pump-26",
+    name: "Hydraulic Hand Pump 26",
+    category: "construction",
+    description: "Portable manual hydraulic pump for construction jacking applications.",
+    image: "/products/3. Equipments for Construction/Hydraulic Power Pack & Hand Pump/26.png",
+    color: "bg-slate-50",
+    colors: ["#1d4ed8", "#64748b", "#111827"],
+    specs: {
+      capacity: "Manual pump",
+      stroke: "N/A",
+      pressure: "Hydraulic hand pump"
+    },
+    features: [
+      "Hand-operated hydraulic pressure source for site work.",
+      "Compact format for construction and maintenance teams.",
+      "Pairs with compatible hydraulic jacks and cylinders."
+    ],
+    technicalData: {
+      headers: ["Specification", "Details"],
+      rows: [
+        ["Type", "Portable hydraulic hand pump"],
+        ["Operation", "Manual"],
+        ["Application", "Hydraulic jacking and maintenance"],
+        ["Compatibility", "Hydraulic cylinders and tools"]
+      ]
+    }
+  },
+  {
+    id: "construction-power-pack-29",
+    name: "Hydraulic Power Pack 29",
+    category: "construction",
+    description: "Electric hydraulic power pack for construction lifting systems.",
+    image: "/products/3. Equipments for Construction/Hydraulic Power Pack & Hand Pump/29.png",
+    color: "bg-blue-50",
+    colors: ["#111827", "#64748b", "#ef4444"],
+    specs: {
+      capacity: "Electric power unit",
+      stroke: "N/A",
+      pressure: "High-pressure hydraulic"
+    },
+    features: [
+      "Electric power unit for construction hydraulic equipment.",
+      "Supports repeated lifting and positioning cycles.",
+      "Available with custom tank, motor and valve combinations."
+    ],
+    technicalData: {
+      headers: ["Specification", "Details"],
+      rows: [
+        ["Type", "Hydraulic power pack"],
+        ["Drive", "Electric"],
+        ["Application", "Construction lifting systems"],
+        ["Customization", "Tank, motor and valve package on request"]
+      ]
+    }
+  },
+  {
+    id: "construction-power-pack-30",
+    name: "Hydraulic Power Pack 30",
+    category: "construction",
+    description: "Hydraulic power unit for construction cylinders and jacks.",
+    image: "/products/3. Equipments for Construction/Hydraulic Power Pack & Hand Pump/30.png",
+    color: "bg-slate-50",
+    colors: ["#111827", "#64748b", "#2563eb"],
+    specs: {
+      capacity: "Electric power unit",
+      stroke: "N/A",
+      pressure: "High-pressure hydraulic"
+    },
+    features: [
+      "Power pack designed for construction hydraulic actuation.",
+      "Supports controlled pressure delivery to jacks and cylinders.",
+      "Can be configured for project-specific flow and pressure needs."
+    ],
+    technicalData: {
+      headers: ["Specification", "Details"],
+      rows: [
+        ["Type", "Hydraulic power unit"],
+        ["Application", "Construction jacks and cylinders"],
+        ["Controls", "Project-specific valve controls"],
+        ["Configuration", "Custom power and reservoir options"]
+      ]
+    }
+  },
+  {
+    id: "construction-power-pack-31",
+    name: "Hydraulic Power Pack 31",
+    category: "construction",
+    description: "Compact power pack for construction-site hydraulic operations.",
+    image: "/products/3. Equipments for Construction/Hydraulic Power Pack & Hand Pump/31.png",
+    color: "bg-blue-50",
+    colors: ["#111827", "#64748b", "#ef4444"],
+    specs: {
+      capacity: "Compact power unit",
+      stroke: "N/A",
+      pressure: "Hydraulic power"
+    },
+    features: [
+      "Compact hydraulic power source for site lifting work.",
+      "Designed for reliable field operation with hydraulic jacks.",
+      "Custom controls and pressure ratings available."
+    ],
+    technicalData: {
+      headers: ["Specification", "Details"],
+      rows: [
+        ["Type", "Compact hydraulic power pack"],
+        ["Application", "Site lifting and hydraulic tooling"],
+        ["Operation", "Electric hydraulic"],
+        ["Customization", "Control and pressure package on request"]
+      ]
+    }
+  },
+  {
+    id: "construction-power-pack-32",
+    name: "Hydraulic Power Pack 32",
+    category: "construction",
+    description: "High-pressure hydraulic power pack for construction lifting equipment.",
+    image: "/products/3. Equipments for Construction/Hydraulic Power Pack & Hand Pump/32.png",
+    color: "bg-slate-50",
+    colors: ["#111827", "#94a3b8", "#2563eb"],
+    specs: {
+      capacity: "High-pressure unit",
+      stroke: "N/A",
+      pressure: "High-pressure hydraulic"
+    },
+    features: [
+      "High-pressure power pack for hydraulic construction equipment.",
+      "Suitable for repeated lifting, pressing and positioning operations.",
+      "Configurable for project flow and pressure requirements."
+    ],
+    technicalData: {
+      headers: ["Specification", "Details"],
+      rows: [
+        ["Type", "High-pressure hydraulic power pack"],
+        ["Application", "Construction lifting and positioning"],
+        ["Use", "Jacks, cylinders and hydraulic tools"],
+        ["Configuration", "Custom motor, pump and reservoir options"]
+      ]
+    }
+  },
+  {
+    id: "construction-mobile-power-pack",
+    name: "Mobile Hydraulic Power Pack",
+    category: "construction",
+    description: "Mobile power pack for portable construction hydraulic operations.",
+    image: "/products/3. Equipments for Construction/Hydraulic Power Pack & Hand Pump/IMG_3509-removebg-preview.png",
+    color: "bg-blue-50",
+    colors: ["#111827", "#64748b", "#ef4444"],
+    specs: {
+      capacity: "Mobile power unit",
+      stroke: "N/A",
+      pressure: "Hydraulic power"
+    },
+    features: [
+      "Portable hydraulic power pack for field deployment.",
+      "Supports construction jacks, cylinders and lifting systems.",
+      "Useful for site maintenance and controlled load movement."
+    ],
+    technicalData: {
+      headers: ["Specification", "Details"],
+      rows: [
+        ["Type", "Mobile hydraulic power pack"],
+        ["Application", "Field construction hydraulics"],
+        ["Operation", "Portable power unit"],
+        ["Compatibility", "Hydraulic cylinders and jacks"]
+      ]
+    }
+  },
+  {
+    id: "construction-power-pack-3904",
+    name: "Hydraulic Power Pack 3904",
+    category: "construction",
+    description: "Industrial hydraulic power pack for high-force construction applications.",
+    image: "/products/3. Equipments for Construction/Hydraulic Power Pack & Hand Pump/IMG_3904.png",
+    color: "bg-slate-50",
+    colors: ["#111827", "#64748b", "#2563eb"],
+    specs: {
+      capacity: "Industrial power unit",
+      stroke: "N/A",
+      pressure: "High-pressure hydraulic"
+    },
+    features: [
+      "Industrial power pack for demanding hydraulic work.",
+      "Designed to supply construction lifting and positioning equipment.",
+      "Customizable for pressure, flow and control mode."
+    ],
+    technicalData: {
+      headers: ["Specification", "Details"],
+      rows: [
+        ["Type", "Industrial hydraulic power pack"],
+        ["Application", "High-force construction hydraulics"],
+        ["Controls", "Manual, push button or custom controls"],
+        ["Customization", "Pressure and flow to project requirement"]
+      ]
+    }
+  },
+  {
+    id: "construction-power-pack",
+    name: "Hydraulic Power Pack",
+    category: "construction",
+    description: "Construction hydraulic power pack for jacking and lifting systems.",
+    image: "/products/3. Equipments for Construction/Hydraulic Power Pack & Hand Pump/Powerpack.png",
+    color: "bg-blue-50",
+    colors: ["#111827", "#94a3b8", "#ef4444"],
+    specs: {
+      capacity: "Custom power output",
+      stroke: "N/A",
+      pressure: "High-pressure hydraulic"
+    },
+    features: [
+      "Hydraulic power pack for construction lifting applications.",
+      "Supports jacks, cylinders and multi-point lifting systems.",
+      "Available in custom configurations for project needs."
+    ],
+    technicalData: {
+      headers: ["Specification", "Details"],
+      rows: [
+        ["Type", "Hydraulic power pack"],
+        ["Application", "Construction jacking and lifting"],
+        ["Supply", "Standalone or integrated with lifting systems"],
+        ["Customization", "Motor, tank, pump and valve options"]
+      ]
+    }
+  },
+  {
+    id: "construction-power-pack-2",
+    name: "Hydraulic Power Pack 2",
+    category: "construction",
+    description: "Alternate hydraulic power pack configuration for construction systems.",
+    image: "/products/3. Equipments for Construction/Hydraulic Power Pack & Hand Pump/powerpack 2.png",
+    color: "bg-slate-50",
+    colors: ["#111827", "#64748b", "#ef4444"],
+    specs: {
+      capacity: "Custom power output",
+      stroke: "N/A",
+      pressure: "High-pressure hydraulic"
+    },
+    features: [
+      "Alternate construction power pack build for hydraulic equipment.",
+      "Configurable hydraulic circuit and reservoir arrangement.",
+      "Suitable for jacks, cylinders and lifting fixtures."
+    ],
+    technicalData: {
+      headers: ["Specification", "Details"],
+      rows: [
+        ["Type", "Hydraulic power pack"],
+        ["Application", "Construction hydraulic systems"],
+        ["Configuration", "Alternate power pack layout"],
+        ["Customization", "Project-specific flow and controls"]
+      ]
+    }
+  },
+  {
+    id: "construction-pp-power-unit",
+    name: "PP Hydraulic Power Unit",
+    category: "construction",
+    description: "Hydraulic power unit for construction-site lifting and positioning work.",
+    image: "/products/3. Equipments for Construction/Hydraulic Power Pack & Hand Pump/pp.png",
+    color: "bg-blue-50",
+    colors: ["#111827", "#64748b", "#2563eb"],
+    specs: {
+      capacity: "Power unit",
+      stroke: "N/A",
+      pressure: "Hydraulic power"
+    },
+    features: [
+      "Power unit for operating construction hydraulic equipment.",
+      "Built for field lifting, pressing and positioning duties.",
+      "Custom pressure and control packages available."
+    ],
+    technicalData: {
+      headers: ["Specification", "Details"],
+      rows: [
+        ["Type", "Hydraulic power unit"],
+        ["Application", "Construction lifting equipment"],
+        ["Use", "Jacks, cylinders and hydraulic tools"],
+        ["Customization", "Pressure, flow and controls to requirement"]
+      ]
+    }
+  },
+  {
+    id: "construction-pp1-power-unit",
+    name: "PP1 Hydraulic Power Unit",
+    category: "construction",
+    description: "Hydraulic power unit variant for construction lifting equipment.",
+    image: "/products/3. Equipments for Construction/Hydraulic Power Pack & Hand Pump/pp1.png",
+    color: "bg-slate-50",
+    colors: ["#111827", "#64748b", "#ef4444"],
+    specs: {
+      capacity: "Power unit",
+      stroke: "N/A",
+      pressure: "Hydraulic power"
+    },
+    features: [
+      "Hydraulic power unit variant for construction-site operation.",
+      "Designed to run compatible jacks and cylinders.",
+      "Can be supplied with custom valves and controls."
+    ],
+    technicalData: {
+      headers: ["Specification", "Details"],
+      rows: [
+        ["Type", "Hydraulic power unit"],
+        ["Application", "Construction jacks and cylinders"],
+        ["Configuration", "Power unit variant"],
+        ["Customization", "Project-specific hydraulic package"]
       ]
     }
   },

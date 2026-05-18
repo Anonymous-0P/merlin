@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from 'motion/react';
 
 const videoUrls = [
+  '/hero_section_videos/Mill Sprocket Puller.mov',
   '/hero_section_videos/30 Sec. Video.mov',
   '/hero_section_videos/De-Hooking 28.54 Sec. mp4.mov',
 ];
@@ -18,7 +19,7 @@ export default function HeroBackground({ videoIndex }: { videoIndex: number }) {
       >
         <video
           key={videoIndex}
-          src={videoUrls[videoIndex % videoUrls.length]}
+          src={videoUrls[videoIndex]}
           className="w-full h-full pointer-events-none object-cover"
           autoPlay
           muted

@@ -44,14 +44,14 @@ export default function ProductCard({ product, index, onClick, onEnquire }: Prod
       onClick={onClick}
       onMouseMove={onMouseMove}
       onMouseLeave={onMouseLeave}
-      className="bg-merlin-gray rounded-[20px] p-5 sm:p-7 shadow-md md:shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer flex flex-col h-full border border-merlin-sage/25 group relative preserve-3d active:scale-[0.98]"
+      className="bg-white rounded-[20px] p-5 sm:p-7 shadow-md md:shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer flex flex-col h-full border border-gray-100 group relative preserve-3d active:scale-[0.98]"
       style={{ transformStyle: 'preserve-3d' }}
     >
       <div className="h-6 mb-1">
         {product.isNew && <span className="text-[11px] font-bold text-orange-600 uppercase tracking-wider">New</span>}
       </div>
 
-      <h3 className="text-xl sm:text-2xl font-bold text-black mb-8 sm:mb-10 leading-tight tracking-tight">
+      <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-8 sm:mb-10 leading-tight tracking-tight">
         {product.name}
       </h3>
 
@@ -73,15 +73,15 @@ export default function ProductCard({ product, index, onClick, onEnquire }: Prod
 
       <div className="flex items-center justify-between pt-6 border-t border-gray-50">
         <div className="flex flex-col">
-          <p className="text-[11px] text-zinc-700 font-medium leading-tight">Specs available</p>
-          <p className="text-[10px] text-zinc-500 leading-tight">view technical data</p>
+          <p className="text-[11px] text-gray-600 font-medium leading-tight">Specs available</p>
+          <p className="text-[10px] text-gray-400 leading-tight">view technical data</p>
         </div>
         <button
           onClick={(event) => {
             event.stopPropagation();
             onEnquire();
           }}
-          className="bg-merlin-blue text-white px-6 py-2 rounded-full text-xs font-bold hover:bg-blue-700 transition-all shadow-sm shadow-blue-500/20"
+          className="bg-[#0071e3] text-white px-6 py-2 rounded-full text-xs font-bold hover:bg-[#0077ed] transition-colors shadow-sm"
         >
           Enquire
         </button>
